@@ -9,7 +9,11 @@
       href="https://fonts.googleapis.com/css?family=Noticia+Text:400i|Roboto"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Macondo+Swash+Caps&family=Oleo+Script&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e8ad5b5799.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.1.min.js"></script>
 
     <title>Sara Heath</title>
   </head>
@@ -24,8 +28,16 @@
     </nav>
     <section id="home">
       <div class="main">
-        <h1 class="heading">Resume</h1>
-        <a class="btn" href="Sara-Heath-Resume.pdf">Check it out!</a>
+        <div id="title-container">
+          <img src="computer_flat_speed.gif" alt="computer">
+          <div class="right-col">
+            <div>
+              <h1>Sara Heath</h1>
+              <h3>Full-Stack Software Engineer</h3>
+            </div>
+            <a id="resume-btn" class="btn" href="">Resume</a>
+          </div>
+        </div>
       </div>
     </section>
     <section id="about">
@@ -34,38 +46,50 @@
             <img src="sara-shadowfax.jpg" alt="sara and shadowfax">
             <div id="intro">
               <h2>Hi! I'm Sara :) </h2>
-                <p id="about-paragraph"> I'm a full stack software engineer. Before making the switch over 
-                  to programming I had a very rewarding and impactful 
-                  career as a hospice massage therapist. Due to the toll
-                  that massage work can have on the body I needed to find a 
-                  new path. I found that software engineering could offer many
-                  of the same gifts that my previous career had, like continued 
-                  learning, new exciting challenges, work that impacts the world and more.
-                  I gained my current developer skills from Rithm School, an intense and focused 
-                  16 week coding bootcamp. There I gathered experience in languages like JavaScript, 
-                  Python, SQL, HTML and CSS. I also had the opportunity to dive into frameworks and other
-                  technologies like React, React-Native, jQuery, Flask, Node.js, PostgreSQL, and Express.
-                  I am excited and ready to continue learning from my peers and all of those in the gracious 
-                  developer community!</p>
+                <p id="about-paragraph"> I'm a full-stack software engineer currently working at RealtyAds, a SaaS company focused on helping commercial real estate owners improve their advertising reach to a specific audience of brokers and potential tenants. I joined RealtyAds as a Junior Software Engineer in 2022 and was promoted mid 2024 to Software Engineer. It's been an exciting journey, and I’ve had the opportunity to contribute to a dynamic team and work on meaningful projects.
+                  <br>
+                  <br>
+                  Before joining RealtyAds, I graduated from Rithm School, an intensive 16-week coding bootcamp that provided me with the foundational skills to transition into the tech industry. Since then, I’ve had hands-on experience with a variety of programming languages, libraries, and technologies. I work with PHP, JavaScript, Python, Node.js, SQL, HTML, CSS, jQuery, React, Flask, Express, PostgreSQL and more.
+                  <br>
+                  <br>
+                  I’m passionate about solving problems, building efficient software solutions, and continuously learning new technologies to stay on top of the ever-evolving tech landscape.
+                  </p>
             </div>
         </div>
     </section>
     <section id="projects">
         <h1 class="headings">PROJECTS</h1>
         <div class="gallery">
-            <a href="https://r26-saraheath-reactjobly.surge.sh/"><img src="jobly-card.png" alt="jobly project"></a>
-            <a href="https://r-26-sara-warbler.herokuapp.com/"><img src="warbler-card.png" alt="warbler project"></a>
-            <a href="https://github.com/saramaheath/tarot-cards-v1"><img src="tarot-card.png" alt="tarot project"></a>
-            <a href="https://github.com/saramaheath/pixly"><img src="pixly-card1.png" alt="pixly project"></a>
+            <a href="https://r26-saraheath-reactjobly.surge.sh/"><img src="bunny_canoe_flat.gif" alt="jobly project"></a>
+            <a href="https://r-26-sara-warbler.herokuapp.com/"><img src="bunny_canoe_flat.gif" alt="warbler project"></a>
+            <a href="https://github.com/saramaheath/tarot-cards-v1"><img src="bunny_canoe_flat.gif" alt="tarot project"></a>
+            <a href="https://github.com/saramaheath/pixly"><img src="bunny_canoe_flat.gif" alt="pixly project"></a>
         </div>
     </section>
     <section id="contact">
         <h1 class="headings">CONTACT</h1>
         <div class="socials">
-            <a href="https://github.com/saramaheath"><img src="GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt=""></a>
-            <a href="https://www.linkedin.com/in/saramaheath/"><img src="LinkedIn-Logos\LI-In-Bug.png" alt=""></a>
+            <a id="github_link" href="https://github.com/saramaheath"><img src="github_icon.png" alt="github"></a>
+            <a id="linkedin_link" href="https://www.linkedin.com/in/saramaheath/"><img src="linkedin_icon.png" alt="linkedin"></a>
+            <a id="mail_link" href="mailto:saramaheath@gmail.com"><img src="email_icon.png" alt="email"></a>
         </div>
     </section>
     </div>
   </body>
 </html>
+<script>
+  $(document).ready(function(){
+
+    $(".socials a img").each(function(){
+      $(this).on("mouseenter", function(){
+        const currSrc = $(this).attr("src");
+        const hoverSrc = currSrc.split('.').join('_hover.');
+        $(this).attr('src', hoverSrc);
+      }).on("mouseleave", function(){
+        const currSrc = $(this).attr("src");
+        const origSrc = currSrc.replace("_hover", "");
+        $(this).attr('src', origSrc);
+      })
+    })
+  })
+</script>
