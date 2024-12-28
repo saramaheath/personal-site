@@ -193,3 +193,59 @@ body {
     justify-content: space-around;
   }
 
+  @media (max-width: 972px) {
+    #pic {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #pic img {
+        width: 250px;
+        margin: 0;
+        padding: 16px;
+    }
+
+    #about-paragraph {
+        padding: 16px;
+        margin: 0;
+    }
+
+    .navbar ul li{
+        font-size: 0.8rem;
+    }
+
+    .right-col {
+        padding: 0 10px 10px 10px;
+    }
+
+    #title-container {
+        padding: 10px 10px 40px 10px;
+        flex-direction: column;
+        width: 80%;
+      }
+
+    #title-container img {
+        padding: 10px;
+    }  
+    
+      #title-container h1 {
+        font-size:  2.5rem;
+        margin-bottom: 6px;
+        margin-top: 0;
+      }
+    
+      #title-container h3 {
+        font-size:  1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .navbar ul li a {
+        padding: 8px 14px;
+      }
+
+      .navbar ul {
+        padding: 0;
+      }
+    
+  }
